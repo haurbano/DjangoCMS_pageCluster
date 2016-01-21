@@ -188,12 +188,14 @@ CMS_TEMPLATES = (
     ## Customize this
     ('page.html', 'Page'),
     ('feature.html', 'Page with Feature')
+	
 )
 
 CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
 
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -204,6 +206,19 @@ DATABASES = {
         'USER': ''
     }
 }
+'''
+DATABASES = {
+    'default':
+        {
+            'ENGINE': 'django.db.backends.mysql', #.sqlite3
+            'NAME': 'creaticdb',
+            'HOST': 'localhost', 
+            'USER': 'root', 
+            'PASSWORD': 'Urbanosolo3', 
+            'PORT': ''
+        }
+}
+#'''
 
 MIGRATION_MODULES = {
     'cmsplugin_filer_teaser': 'cmsplugin_filer_teaser.migrations_django',
